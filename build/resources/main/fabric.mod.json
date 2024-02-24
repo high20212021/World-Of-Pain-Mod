@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "worldofpain",
+	"version": "1.0.0",
+	"name": "World Of Pain",
+	"description": "STILL IN EARLY DEPLOYMENT",
+	"authors": [
+		"YukatiQwQ"
+	],
+	"contact": {
+		"homepage": "https://high20212021.github.io/"
+	},
+	"license": "WTFPL",
+	"icon": "assets/worldofpain/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"moe.yukatimeow.WorldOfPain"
+		]
+	},
+	"mixins": [
+		"worldofpain.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.18.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

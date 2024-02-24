@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+	" E ",
+	"WEW",
+	" S "
+    ],
+    "key": {
+	"E": {
+	    "item": "worldofpain:unstable_power"
+	},
+	"W": {
+	    "item": "minecraft:ender_eye"
+	},
+	"S": {
+	    "item": "minecraft:stick"
+	}
+    },
+    "result": {
+	"item": "worldofpain:unstable_power_sword",
+	"count": 1
+    }
+}

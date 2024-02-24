@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    " E ",
+    "iii"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:diamond_block"
+    },
+    "E": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "i": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:anvil"
+  }
+}

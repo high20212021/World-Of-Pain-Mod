@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+	" E ",
+	"EKE",
+	" E "
+    ],
+    "key": {
+	"E": {
+	    "item": "minecraft:obsidian"
+	},
+	"K": {
+	    "item": "minecraft:ender_eye"
+	}
+    },
+    "result": {
+	"item": "worldofpain:unstable_power",
+	"count": 2
+    }
+}
