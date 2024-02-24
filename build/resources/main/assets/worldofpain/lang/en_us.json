@@ -3,5 +3,7 @@
 	"itemGroup.worldofpain.other": "World Of Pain",
 	"item.worldofpain.unstable_power": "Unstable Power",
 	"item.worldofpain.unstable_power.tooltip": "§7Beneath the fragile shell, an undercurrent of energy surges",
-  "item.worldofpain.worldpoint": "The World Point"
+  "item.worldofpain.worldpoint": "The World Point",
+  "item.worldofpain.unstable_power_axe": "Unstable Power Axe",
+  "item.worldofpain.horse_meat": "Horse Meat"
 }

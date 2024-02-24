@@ -13,7 +13,7 @@ public class UnstablePowerToolMaterial implements ToolMaterial{
 
   @Override
   public float getMiningSpeedMultiplier() {
-	  return 0;
+    return 60;
   }
 
   @Override
@@ -23,7 +23,7 @@ public class UnstablePowerToolMaterial implements ToolMaterial{
 
   @Override
   public int getMiningLevel() {
-	  return 0;
+	  return 4;
   }
 
   @Override
