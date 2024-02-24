@@ -19,7 +19,7 @@ jobs:
     - name: Set up Java
       uses: actions/setup-java@v2
       with:
-        distribution: 'termuin'
+        distribution: 'temurin'
         java-version: '1.17'
 
     - name: Build Mod
