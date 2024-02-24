@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+	"NEN",
+	"EKE",
+	"NEN"
+    ],
+    "key": {
+	"E": {
+	    "item": "minecraft:obsidian"
+	},
+	"K": {
+	    "item": "worldofpain:unstable_power"
+	},
+  "N": {
+      "item": "minecraft:netherite_block"
+    }
+    },
+    "result": {
+	"item": "minecraft:bedrock",
+	"count": 1
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+	" E ",
+	"EKE",
+	" E "
+    ],
+    "key": {
+	"E": {
+	    "item": "minecraft:bedrock"
+	},
+	"K": {
+	    "item": "minecraft:bedrock"
+	}
+    },
+    "result": {
+	"item": "worldofpain:worldpoint",
+	"count": 1
+    }
+}
