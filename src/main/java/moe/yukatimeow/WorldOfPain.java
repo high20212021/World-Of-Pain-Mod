@@ -21,7 +21,7 @@ public class WorldOfPain implements ModInitializer {
 
   public static final UnstablePower UNSTABLE_POWER = new UnstablePower(new Item.Settings().group(ItemGroup.MISC).maxCount(16).fireproof());
   public static final UnstablePowerSword UNSTABLE_POWER_SWORD = new UnstablePowerSword(new UnstablePowerToolMaterial(), 14, -0.08f, new Item.Settings().group(ItemGroup.COMBAT));
-  public static final WorldPoint WORLDPOINT = new WorldPoint(new Item.Setting().group(ItemGroup.MISC).maxCount(1));
+  public static final WorldPoint WORLDPOINT = new WorldPoint(new Item.Settings().group(ItemGroup.MISC).maxCount(1));
 
   @Override
   public void onInitialize() {
