@@ -10,10 +10,10 @@
 	    "item": "worldofpain:unstable_power"
 	},
 	"W": {
-	    "item": "minecraft:ender_eye"
+	    "item": "minecraft:obsidian"
 	},
 	"S": {
-	    "item": "minecraft:stick"
+	    "item": "minecraft:blaze_rod"
 	}
     },
     "result": {
