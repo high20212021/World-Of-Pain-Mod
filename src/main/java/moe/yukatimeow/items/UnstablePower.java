@@ -6,9 +6,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import org.jetbrains.annotations.Nullable;
+import java.util.List;
+import net.minecraft.client.item.TooltipContext;
 
 public class UnstablePower extends Item {
     public UnstablePower(Settings settings) {
@@ -24,8 +28,7 @@ public class UnstablePower extends Item {
 	return TypedActionResult.pass(user.getStackInHand(hand));
     }
     
-    @Override
-    public appendTooltip(ItemStack stack, @Nullable World world, PlayerEntity user, List<Text> tooltip, TooltipContext context) {
-	tooltip.add(new TranslateableText("item.worldofpain.unstable_power.tooltip"));
+    public void appendTooltip(ItemStack stack, @Nullable World world, PlayerEntity user, List<Text> tooltip, TooltipContext context) {
+	tooltip.add(new TranslatableText("item.worldofpain.unstable_power.tooltip"));
     }
 }

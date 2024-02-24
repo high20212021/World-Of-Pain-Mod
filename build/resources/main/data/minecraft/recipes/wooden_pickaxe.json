@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
+    "X": {
+      "tag": "minecraft:bedrock"
+    }
+  },
+  "result": {
+    "item": "minecraft:wooden_pickaxe"
+  }
+}
