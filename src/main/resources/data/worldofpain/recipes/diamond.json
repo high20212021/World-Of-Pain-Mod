@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+	  "LPL",
+	  "PCP",
+	  "LPL"
+  ],
+  "key": {
+	  "P": {
+	    "item": "minecraft:piston"
+	  },
+	  "C": {
+	    "item": "minecraft:coal"
+	  },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+	  "item": "minecraft:diamond",
+	  "count": 1
+  }
+}
