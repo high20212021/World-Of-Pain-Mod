@@ -10,6 +10,7 @@ import moe.yukatimeow.worldofpain.tools.UnstablePowerAxe;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -18,11 +19,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.*;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.block.Material;
+import net.minecraft.block.AbstractBlock;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.GameRules;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.OreBlock;
 
 public class WorldOfPain implements ModInitializer {
 
@@ -37,6 +47,7 @@ public class WorldOfPain implements ModInitializer {
     .snack()
     .saturationModifier(4.0f)
     .build()));
+  public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE));
 
   @Override
   public void onInitialize() {
@@ -48,6 +59,23 @@ public class WorldOfPain implements ModInitializer {
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "horse_meat"),HORSE_MEAT);
     FuelRegistry.INSTANCE.add(WorldOfPain.UNSTABLE_POWER, 1310700);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "worldsword"),WORLDSWORD);
+    Registry.register(Registry.BLOCK,new Identifier("worldofpain", "obsidian_ore"),OBSIDIAN_ORE);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "obsidian_ore"), new BlockItem(OBSIDIAN_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
   
   }
+
+  public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder.create(
+                  new Identifier("worldofpain", "other"))
+          .icon(() -> new ItemStack(WorldOfPain.UNSTABLE_POWER))
+          .appendItems(stacks -> {
+            stacks.add(new ItemStack(WorldOfPain.UNSTABLE_POWER));
+            stacks.add(new ItemStack(WorldOfPain.UNSTABLE_POWER_AXE));
+            stacks.add(new ItemStack(WorldOfPain.UNSTABLE_POWER_SWORD));
+            stacks.add(new ItemStack(WorldOfPain.WORLDSWORD));
+            stacks.add(new ItemStack(WorldOfPain.WORLDPOINT));
+            stacks.add(new ItemStack(WorldOfPain.HORSE_MEAT));
+            stacks.add(new ItemStack(WorldOfPain.OBSIDIAN_ORE));
+          })
+          .build();
+
 }
