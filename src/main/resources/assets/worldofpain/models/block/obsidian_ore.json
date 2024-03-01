@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "worldofpain:block/obsidian_ore"
+  }
+}
