@@ -41,13 +41,15 @@ public class WorldOfPain implements ModInitializer {
   public static final WorldSword WORLDSWORD = new WorldSword(new WorldToolMaterial(), 2147483647, -0.10f, new Item.Settings().group(ItemGroup.COMBAT));
   public static final WorldPoint WORLDPOINT = new WorldPoint(new Item.Settings().group(ItemGroup.MISC).maxCount(1));
   public static final UnstablePowerAxe UNSTABLE_POWER_AXE = new UnstablePowerAxe(new UnstablePowerToolMaterial(), 16, -0.08f, new Item.Settings().group(ItemGroup.TOOLS));
+  public static final AncientNetherite ANCIENT_NETHERITE = new AncientNetherite(new Item.Settings());
   public static final Item HORSE_MEAT = new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder()
     .hunger(10)
     .meat()
     .snack()
     .saturationModifier(4.0f)
     .build()));
-  public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE).strength(50.0f, 2400.0f).requiresTool());
+  public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE).strength(50.0f, 2400.0f));
+
 
   @Override
   public void onInitialize() {
@@ -75,6 +77,7 @@ public class WorldOfPain implements ModInitializer {
             stacks.add(new ItemStack(WorldOfPain.WORLDPOINT));
             stacks.add(new ItemStack(WorldOfPain.HORSE_MEAT));
             stacks.add(new ItemStack(WorldOfPain.OBSIDIAN_ORE));
+            stacks.add(new ItemStack(WorldOfPain.ANCIENT_NETHERITE));
           })
           .build();
 
