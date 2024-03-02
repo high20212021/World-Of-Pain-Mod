@@ -41,7 +41,7 @@ public class WorldOfPain implements ModInitializer {
   public static final WorldSword WORLDSWORD = new WorldSword(new WorldToolMaterial(), 2147483647, -0.10f, new Item.Settings().group(ItemGroup.COMBAT));
   public static final WorldPoint WORLDPOINT = new WorldPoint(new Item.Settings().group(ItemGroup.MISC).maxCount(1));
   public static final UnstablePowerAxe UNSTABLE_POWER_AXE = new UnstablePowerAxe(new UnstablePowerToolMaterial(), 16, -0.08f, new Item.Settings().group(ItemGroup.TOOLS));
-  public static final AncientNetherite ANCIENT_NETHERITE = new AncientNetherite(new Item.Settings());
+  public static final Item ANCIENT_NETHERITE = new Item(new Item.Settings());
   public static final Item HORSE_MEAT = new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder()
     .hunger(10)
     .meat()
@@ -53,6 +53,13 @@ public class WorldOfPain implements ModInitializer {
 
   @Override
   public void onInitialize() {
+
+    ServerTickEvents.END_SERVER_TICK.register(server -> {
+      for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()){
+        StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.MINING_FATIGUE, Integer.MAX_VALUE, 0, false, false);
+        player.addStatusEffect(effect);
+      }
+    });
 	
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power"),UNSTABLE_POWER);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power_sword"),UNSTABLE_POWER_SWORD);
