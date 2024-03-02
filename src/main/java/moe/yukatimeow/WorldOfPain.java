@@ -63,6 +63,7 @@ public class WorldOfPain implements ModInitializer {
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "worldsword"),WORLDSWORD);
     Registry.register(Registry.BLOCK,new Identifier("worldofpain", "obsidian_ore"),OBSIDIAN_ORE);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "obsidian_ore"), new BlockItem(OBSIDIAN_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "ancient_netherite"),ANCIENT_NETHERITE);
   
   }
 
