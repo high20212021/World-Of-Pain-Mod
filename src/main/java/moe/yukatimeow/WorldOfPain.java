@@ -54,13 +54,6 @@ public class WorldOfPain implements ModInitializer {
   @Override
   public void onInitialize() {
 
-    ServerTickEvents.END_SERVER_TICK.register(server -> {
-      for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()){
-        StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.MINING_FATIGUE, Integer.MAX_VALUE, 0, false, false);
-        player.addStatusEffect(effect);
-      }
-    });
-	
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power"),UNSTABLE_POWER);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power_sword"),UNSTABLE_POWER_SWORD);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "worldpoint"),WORLDPOINT);
