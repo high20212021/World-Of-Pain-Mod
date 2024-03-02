@@ -3,9 +3,11 @@
 	"id": "worldofpain",
 	"version": "${version}",
 	"name": "World Of Pain",
-	"description": "STILL IN EARLY DEPLOYMENT",
+	"description": "Difficult world!Adventure world!",
 	"authors": [
-		"YukatiQwQ"
+		"YukatiQwQ",
+    "LavainmcOvO",
+    "Pot_Tx"
 	],
 	"contact": {
 		"homepage": "https://high20212021.github.io/"

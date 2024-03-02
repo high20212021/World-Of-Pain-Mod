@@ -47,7 +47,7 @@ public class WorldOfPain implements ModInitializer {
     .snack()
     .saturationModifier(4.0f)
     .build()));
-  public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE));
+  public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE).strength(50.0f, 2400.0f).requiresTool());
 
   @Override
   public void onInitialize() {
