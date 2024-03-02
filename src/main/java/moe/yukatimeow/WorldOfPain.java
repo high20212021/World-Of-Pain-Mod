@@ -65,6 +65,12 @@ public class WorldOfPain implements ModInitializer {
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "obsidian_ore"), new BlockItem(OBSIDIAN_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "ancient_netherite"),ANCIENT_NETHERITE);
   
+    ServerTickEvents.END_SERVER_TICK.register(server -> {
+      for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()){
+        StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.MINING_FATIGUE, Integer.MAX_VALUE, 0, false, false);
+        player.addStatusEffect(effect);
+      }
+    });
   }
 
   public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder.create(
