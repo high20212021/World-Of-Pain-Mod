@@ -78,9 +78,6 @@ public class WorldOfPain implements ModInitializer {
             player.setHealth(12.0f);
           }
         }
-        if (player.getAttributeInstance(EntityAttributes.GENERIC_FOLLOW_RANGE).getBaseValue() != 1.5) {
-          player.getAttributeInstance(EntityAttributes.GENERIC_FOLLOW_RANGE).setBaseValue(1.5);
-        }
       }
     });
 
