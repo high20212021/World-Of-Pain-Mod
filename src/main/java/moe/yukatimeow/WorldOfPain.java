@@ -9,11 +9,14 @@ import moe.yukatimeow.worldofpain.tools.WorldToolMaterial;
 import moe.yukatimeow.worldofpain.tools.UnstablePowerAxe;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.entity.event.v1.ServerEntityWorldChangeEvents;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.effect.*;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
@@ -69,8 +72,18 @@ public class WorldOfPain implements ModInitializer {
       for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()){
         StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.MINING_FATIGUE, Integer.MAX_VALUE, 0, false, false);
         player.addStatusEffect(effect);
+        if (player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).getBaseValue() != 12.0) {
+          player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(12.0);
+          if (player.getHealth() > 12.0f) {
+            player.setHealth(12.0f);
+          }
+        }
+        if (player.getAttributeInstance(EntityAttributes.GENERIC_FOLLOW_RANGE).getBaseValue() != 1.5) {
+          player.getAttributeInstance(EntityAttributes.GENERIC_FOLLOW_RANGE).setBaseValue(1.5);
+        }
       }
     });
+
   }
 
   public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder.create(
