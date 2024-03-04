@@ -30,12 +30,14 @@ import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricMaterialBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.GameRules;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.OreBlock;
+import net.minecraft.block.entity.BlockEntityType;
 
 public class WorldOfPain implements ModInitializer {
 
@@ -56,6 +58,8 @@ public class WorldOfPain implements ModInitializer {
 
   @Override
   public void onInitialize() {
+
+    BREAK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,new Identifier("worldofpain", "break_entity"), FabricBlockEntityTypeBuilder.create(BreakEntity::new, BREAK_BLOCK).build(null));
 
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power"),UNSTABLE_POWER);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power_sword"),UNSTABLE_POWER_SWORD);
