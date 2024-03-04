@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "IEI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:netherrack"
+    },
+    "E": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "minecraft:furnace"
+  }
+}

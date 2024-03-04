@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "minecraft:ancient_debris"
+  },
+  "result": "worldofpain:ancient_netherite",
+  "experience": 2.0,
+  "cookingtime": 100
+}
