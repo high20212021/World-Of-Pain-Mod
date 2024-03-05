@@ -5,16 +5,20 @@ import moe.yukatimeow.worldofpain.items.WorldPoint;
 import moe.yukatimeow.worldofpain.tools.weapon.UnstablePowerSword;
 import moe.yukatimeow.worldofpain.tools.weapon.WorldSword;
 import moe.yukatimeow.worldofpain.tools.UnstablePowerToolMaterial;
+import moe.yukatimeow.worldofpain.armor.material.WoodenArmorMaterial;
+import moe.yukatimeow.worldofpain.armor.WoodenArmorItem;
 import moe.yukatimeow.worldofpain.tools.WorldToolMaterial;
 import moe.yukatimeow.worldofpain.tools.UnstablePowerAxe;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.entity.event.v1.ServerEntityWorldChangeEvents;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.effect.*;
@@ -54,12 +58,16 @@ public class WorldOfPain implements ModInitializer {
     .saturationModifier(4.0f)
     .build()));
   public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE).strength(50.0f, 2400.0f));
+  public static final ArmorMaterial WOODEN_MATERIAL = new WoodenArmorMaterial();
+  public static final WoodenArmorItem WOODEN_HELMET = new WoodenArmorMaterial(WOODEN_MATERIAL, EquipmentSlot.HEAD, Item.Settings());
+  public static final WoodenArmorItem WOODEN_CHEST = new WoodenArmorMaterial(WOODEN_MATERIAL, EquipmentSlot.CHEST, Item.Settings());
+  public static final WoodenArmorItem WOODEN_LEGGINGS = new WoodenArmorMaterial(WOODEN_MATERIAL, EquipmentSlot.LEGS, Item.Settings());
+  public static final WoodenArmorItem WOODEN_BOOTS = new WoodenArmorMaterial(WOODEN_MATERIAL, EquipmentSlot.FEET, Item.Settings());
 
 
   @Override
   public void onInitialize() {
 
-    BREAK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,new Identifier("worldofpain", "break_entity"), FabricBlockEntityTypeBuilder.create(BreakEntity::new, BREAK_BLOCK).build(null));
 
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power"),UNSTABLE_POWER);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "unstable_power_sword"),UNSTABLE_POWER_SWORD);
@@ -71,6 +79,10 @@ public class WorldOfPain implements ModInitializer {
     Registry.register(Registry.BLOCK,new Identifier("worldofpain", "obsidian_ore"),OBSIDIAN_ORE);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "obsidian_ore"), new BlockItem(OBSIDIAN_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "ancient_netherite"),ANCIENT_NETHERITE);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "wooden_helmet"), WOODEN_HELMET);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "wooden_chest"), WOODEN_CHEST);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "wooden_leggings"), WOODEN_LEGGINGS);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "wooden_boots"), WOODEN_BOOTS);
   
     ServerTickEvents.END_SERVER_TICK.register(server -> {
       for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()){
@@ -99,6 +111,10 @@ public class WorldOfPain implements ModInitializer {
             stacks.add(new ItemStack(WorldOfPain.HORSE_MEAT));
             stacks.add(new ItemStack(WorldOfPain.OBSIDIAN_ORE));
             stacks.add(new ItemStack(WorldOfPain.ANCIENT_NETHERITE));
+            stacks.add(new ItemStack(WorldOfPain.WOODEN_HELMET));
+            stacks.add(new ItemStack(WorldOfPain.WOODEN_CHEST));
+            stacks.add(new ItemStack(WorldOfPain.WOODEN_LEGGINGS));
+            stacks.add(new ItemStack(WorldOfPain.WOODEN_BOOTS));
           })
           .build();
 
