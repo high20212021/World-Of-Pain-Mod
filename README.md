@@ -1,5 +1,5 @@
 # World of Pain Mod(困难世界模组)  
-> 你是否觉得原版Minecraft太枯燥乏味了？  
+![build](https://img.shields.io/github/actions/workflow/status/high20212021/World-Of-Pain-Mod/gradle.yml?branch=main)
 ## 兼容版本  
 1.18.2 Fabric  
 ## 贡献者  
