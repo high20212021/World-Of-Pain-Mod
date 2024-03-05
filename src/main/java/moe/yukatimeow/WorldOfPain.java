@@ -5,7 +5,7 @@ import moe.yukatimeow.worldofpain.items.WorldPoint;
 import moe.yukatimeow.worldofpain.tools.weapon.UnstablePowerSword;
 import moe.yukatimeow.worldofpain.tools.weapon.WorldSword;
 import moe.yukatimeow.worldofpain.tools.UnstablePowerToolMaterial;
-import moe.yukatimeow.worldofpain.armor.material.WoodenArmorMaterial;
+import moe.yukatimeow.armor.material.WoodenArmorMaterial;
 import moe.yukatimeow.worldofpain.armor.WoodenArmorItem;
 import moe.yukatimeow.worldofpain.tools.WorldToolMaterial;
 import moe.yukatimeow.worldofpain.tools.UnstablePowerAxe;
