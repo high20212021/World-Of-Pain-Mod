@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+	"N N",
+	"NNN",
+  "NNN"
+    ],
+    "key": {
+  "N": {
+      "item": "minecraft:stick"
+    }
+    },
+    "result": {
+	"item": "worldofpain:wooden_chest",
+	"count": 1
+    }
+}

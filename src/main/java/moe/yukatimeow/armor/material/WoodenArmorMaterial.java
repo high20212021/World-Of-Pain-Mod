@@ -10,7 +10,8 @@ import net.minecraft.item.Items;
 
 public class WoodenArmorMaterial implements ArmorMaterial {
 
-  private static final int[] PROTECTION = {2,3,2,1};
+
+  private static final int[] PROTECTION = {1,1,1,1};
 
   @Override
   public int getDurability(EquipmentSlot slot) {
@@ -49,6 +50,6 @@ public class WoodenArmorMaterial implements ArmorMaterial {
 
   @Override
   public float getKnockbackResistance() {
-    return 1f;
+    return 0f;
   }
 }
