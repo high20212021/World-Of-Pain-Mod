@@ -8,5 +8,9 @@
   "item.worldofpain.horse_meat": "Horse Meat",
   "item.worldofpain.worldsword": "[Creative Item]World Killer",
   "block.worldofpain.obsidian_ore": "Obsidian Ore",
-  "item.worldofpain.ancient_netherite": "Ancient Netherite"
+  "item.worldofpain.ancient_netherite": "Ancient Netherite",
+  "item.worldofpain.wooden_helmet": "Wooden Helmet",
+  "item.worldofpain.wooden_chest": "Wooden ChestPlate",
+  "item.worldofpain.wooden_leggings": "Wooden Leggings",
+  "item.worldofpain.wooden_boots": "Wooden Boots"
 }

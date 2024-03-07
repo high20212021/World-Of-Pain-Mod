@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+	"N N",
+	"N N"
+    ],
+    "key": {
+  "N": {
+      "item": "minecraft:stick"
+    }
+    },
+    "result": {
+	"item": "worldofpain:wooden_boots",
+	"count": 1
+    }
+}
