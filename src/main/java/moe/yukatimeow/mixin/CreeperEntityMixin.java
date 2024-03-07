@@ -25,7 +25,7 @@ public abstract class CreeperEntityMixin extends Entity {
   public void CreeperExplodeMixin(CallbackInfo ci) {
     if (!this.world.isClient()) {
       ci.cancel();
-      this.world.createExplosion(this, this.getX(), this.getY(), this.getZ(), 1000f, Explosion.DestructionType.DESTROY);
+      this.world.createExplosion(this, this.getX(), this.getY(), this.getZ(), 50f, Explosion.DestructionType.DESTROY);
       this.discard();
     }
   }
