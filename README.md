@@ -1,5 +1,6 @@
 # World of Pain Mod(困难世界模组)  
 ![build](https://img.shields.io/github/actions/workflow/status/high20212021/World-Of-Pain-Mod/gradle.yml?branch=main)
+![Discord](https://img.shields.io/discord/96GU3n2sYg.svg?label=Discord&color=7289DA&logo=discord)
 ## 兼容版本  
 1.18.2 Fabric  
 ## 贡献者  
