@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated"
 	"textures": {
-		"layer0": "worldofpain:item/steel_ingot.json"
+		"layer0": "worldofpain:item/steel_ingot"
 	}
 }
