@@ -63,6 +63,8 @@ public class WorldOfPain implements ModInitializer {
   public static final WoodenArmorItem WOODEN_CHEST = new WoodenArmorItem(WOODEN_MATERIAL, EquipmentSlot.CHEST, new Item.Settings());
   public static final WoodenArmorItem WOODEN_LEGGINGS = new WoodenArmorItem(WOODEN_MATERIAL, EquipmentSlot.LEGS, new Item.Settings());
   public static final WoodenArmorItem WOODEN_BOOTS = new WoodenArmorItem(WOODEN_MATERIAL, EquipmentSlot.FEET, new Item.Settings());
+  public static final Item POOR_KNIFE = new Item(new Item.Settings());
+  public static final Item STEEL_INGOT = new Item(new Item.Settings());
 
 
   @Override
@@ -83,6 +85,8 @@ public class WorldOfPain implements ModInitializer {
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "wooden_chest"), WOODEN_CHEST);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "wooden_leggings"), WOODEN_LEGGINGS);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "wooden_boots"), WOODEN_BOOTS);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "poor_knife"), POOR_KNIFE);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "steel_ingot"), STEEL_INGOT);
   
     ServerTickEvents.END_SERVER_TICK.register(server -> {
       for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()){
@@ -115,6 +119,8 @@ public class WorldOfPain implements ModInitializer {
             stacks.add(new ItemStack(WorldOfPain.WOODEN_CHEST));
             stacks.add(new ItemStack(WorldOfPain.WOODEN_LEGGINGS));
             stacks.add(new ItemStack(WorldOfPain.WOODEN_BOOTS));
+            stacks.add(new ItemStack(WorldOfPain.POOR_KNIFE));
+            stacks.add(new ItemStack(WorldOfPain.STEEL_INGOT));
           })
           .build();
 

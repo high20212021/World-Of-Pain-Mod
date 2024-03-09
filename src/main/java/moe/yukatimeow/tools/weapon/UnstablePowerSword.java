@@ -16,7 +16,7 @@ public class UnstablePowerSword extends SwordItem {
   @Override
   public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker){
     World world = attacker.getWorld();
-    world.createExplosion(attacker, attacker.getX(), attacker.getY(), attacker.getZ(), 5, false, Explosion.DestructionType.DESTROY);
+    world.createExplosion(attacker, attacker.getX(), attacker.getY(), attacker.getZ(), 5, false, Explosion.DestructionType.NONE);
     return super.postHit(stack, target, attacker);
   }
 }
