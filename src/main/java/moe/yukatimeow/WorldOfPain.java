@@ -57,7 +57,7 @@ public class WorldOfPain implements ModInitializer {
     .snack()
     .saturationModifier(4.0f)
     .build()));
-  public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE).strength(50.0f, 2400.0f));
+  public static final Block OBSIDIAN_ORE = new Block(AbstractBlock.Settings.of(Material.STONE).strength(25.0f, 2400.0f));
   public static final ArmorMaterial WOODEN_MATERIAL = new WoodenArmorMaterial();
   public static final WoodenArmorItem WOODEN_HELMET = new WoodenArmorItem(WOODEN_MATERIAL, EquipmentSlot.HEAD, new Item.Settings());
   public static final WoodenArmorItem WOODEN_CHEST = new WoodenArmorItem(WOODEN_MATERIAL, EquipmentSlot.CHEST, new Item.Settings());
