@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "worldofpain:steel_ingot"
+  },
+  "addition": {
+    "item": "worldofpain:mistrag"
+  },
+  "result": {
+    "item": "minecraft:ghost_ingot"
+  }
+}
