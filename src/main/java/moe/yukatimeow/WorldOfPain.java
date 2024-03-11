@@ -95,9 +95,9 @@ public class WorldOfPain implements ModInitializer {
   
     ServerTickEvents.END_SERVER_TICK.register(server -> {
       for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()){
-        StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.MINING_FATIGUE, Integer.MAX_VALUE, 2, false, false);
+        StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.MINING_FATIGUE, Integer.MAX_VALUE, 1, false, false);
         player.addStatusEffect(effect);
-        StatusEffectInstance hunger = new StatusEffectInstance(StatusEffects.HUNGER, Integer.MAX_VALUE, 0, false, false);
+        StatusEffectInstance hunger = new StatusEffectInstance(StatusEffects.HUNGER, Integer.MAX_VALUE, 1, false, false);
         player.addStatusEffect(hunger);
         if (player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).getBaseValue() != 12.0) {
           player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(12.0);
