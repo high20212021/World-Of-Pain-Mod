@@ -67,6 +67,7 @@ public class WorldOfPain implements ModInitializer {
   public static final Item STEEL_INGOT = new Item(new Item.Settings());
   public static final Item GHOST_INGOT = new Item(new Item.Settings());
   public static final Item MISTRAG = new Item(new Item.Settings());
+  public static final Item IRON_INGOT = new Item(new Item.Settings());
 
 
   @Override
@@ -91,6 +92,7 @@ public class WorldOfPain implements ModInitializer {
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "steel_ingot"), STEEL_INGOT);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "ghost_ingot"), GHOST_INGOT);
     Registry.register(Registry.ITEM,new Identifier("worldofpain", "mistrag"), MISTRAG);
+    Registry.register(Registry.ITEM,new Identifier("worldofpain", "iron_ingot"), IRON_INGOT);
 
   
     ServerTickEvents.END_SERVER_TICK.register(server -> {
@@ -130,6 +132,7 @@ public class WorldOfPain implements ModInitializer {
             stacks.add(new ItemStack(WorldOfPain.STEEL_INGOT));
             stacks.add(new ItemStack(WorldOfPain.GHOST_INGOT));
             stacks.add(new ItemStack(WorldOfPain.MISTRAG));
+            stacks.add(new ItemStack(WorldOfPain.IRON_INGOT));
           })
           .build();
 

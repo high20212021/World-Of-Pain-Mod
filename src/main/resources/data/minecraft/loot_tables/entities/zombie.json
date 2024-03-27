@@ -36,7 +36,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_nugget"
+          "name": "worldofpain:iron_ingot"
         },
         {
           "type": "minecraft:item",
